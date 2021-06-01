@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//      If user has not internet, then shows NO CONNECTION view  
+//      If user doesn't have internet, then shows NO CONNECTION view  
         if (!isNetworkAvailable(this)) {
             fragment_container.visibility = View.GONE
             no_connection.visibility = View.VISIBLE
