@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_to_cart" translatable="false">Savatchaga qo\'shish</string>
+    <string name="added_to_cart">Qo\'shilgan</string>
+    <string name="item_is_added">Mahsulot allaqachon savatchada</string>
+    <string name="product_added">Mahsulot savatchaga qo\'shildi</string>
+    <string name="make_order">Buyurtma qilish</string>
+    <string name="title_activity_maps">Xarita</string>
+    <string name="delivery_address">Yetkazish manzili</string>
+    <string name="comment">Komment</string>
+    <string name="confirm">Tasdiqlash</string>
+    <string name="your_code_here">Yuborilgan kod</string>
+    <string name="your_number">Raqamingiz</string>
+    <string name="get_your_code">Kodni olish</string>
+    <string name="check_your_connection">Internet aloqani tekshiring:(</string>
+    <string name="try_again">Yana urinish</string>
+    <string name="empty">Bo\'m-bo\'sh</string>
+    <string name="function_not_implemented">Halicha bu funksiya tayyor emas</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_to_cart">Добавить в корзину</string>
+    <string name="added_to_cart">Добавлен</string>
+    <string name="item_is_added">Товар уже в корзине</string>
+    <string name="product_added">Товар добавлен в корзину</string>
+    <string name="make_order">Сделать заказ</string>
+    <string name="title_activity_maps">Rарта</string>
+    <string name="delivery_address">Адресс доставки</string>
+    <string name="comment">Комментарий</string>
+    <string name="confirm">Подтверждать</string>
+    <string name="your_code_here">Ваш код</string>
+    <string name="your_number">Ваш номер</string>
+    <string name="get_your_code">Получите свой код</string>
+    <string name="check_your_connection">Проверьте ваше соединение:(</string>
+    <string name="try_again">Попробовать еще раз</string>
+    <string name="empty">Пустой</string>
+    <string name="function_not_implemented">Мы еще не реализовали эту функцию</string>
+</resources>

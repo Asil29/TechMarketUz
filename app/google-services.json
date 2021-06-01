@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "688093148930",
+    "project_id": "techmarketuz",
+    "storage_bucket": "techmarketuz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688093148930:android:0d862d1e86daed3f87741b",
+        "android_client_info": {
+          "package_name": "com.example.onlineshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688093148930-ada8hnm1tcsoeqs7lqktogc5dh31ro2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJgkhN5QhpTZWxZ29uIGX8X0Th_FresQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688093148930-ada8hnm1tcsoeqs7lqktogc5dh31ro2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

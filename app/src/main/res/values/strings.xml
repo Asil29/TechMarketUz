@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name" translatable="false">Techmarket.uz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="added_to_cart">Added</string>
+    <string name="item_is_added">Item is already in the cart</string>
+    <string name="product_added">Item is added to cart</string>
+    <string name="make_order">Make order</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="comment">Comment</string>
+    <string name="confirm">Confirm</string>
+    <string name="uz" translatable="false">UZ</string>
+    <string name="eng" translatable="false">EN</string>
+    <string name="ru" translatable="false">RU</string>
+    <string name="open" translatable="false">Open</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="techmarket_uz" translatable="false">TechMarket.uz</string>
+    <string name="your_code_here">Your code here</string>
+    <string name="your_number">Your number</string>
+    <string name="get_your_code">Get your code</string>
+    <string name="check_your_connection">Check your connection:(</string>
+    <string name="try_again">Try again</string>
+    <string name="empty">Empty</string>
+    <string name="function_not_implemented">We have not implement this function yet</string>
+</resources>
