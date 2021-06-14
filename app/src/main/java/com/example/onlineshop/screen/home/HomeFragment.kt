@@ -5,20 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.onlineshop.R
 import com.example.onlineshop.model.CategoryModel
-import com.example.onlineshop.model.OfferModel
 import com.example.onlineshop.recyclerview.CategoryAdapter
 import com.example.onlineshop.recyclerview.CategoryOnClick
+import com.example.onlineshop.recyclerview.GridSpacingItemDecoration
 import com.example.onlineshop.recyclerview.ProductsAdapter
-import com.example.onlineshop.utils.Constants
 import com.example.onlineshop.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -51,21 +49,24 @@ class HomeFragment : Fragment() {
 //      This is for building category views
         category_recyclerView.layoutManager =
             LinearLayoutManager(requireActivity(), RecyclerView.HORIZONTAL, false)
-//      This is for building product views
+        //      This is for building product views
+        product_recyclerView.addItemDecoration(GridSpacingItemDecoration(3, 30, false))
         product_recyclerView.layoutManager =
-            LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
+            GridLayoutManager(requireActivity(), 2)
 //      This is executed when there is an error while and after requesting data from API
         mainViewModel.errorLiveData.observe(requireActivity(), Observer {
             Toast.makeText(requireActivity(), it, Toast.LENGTH_LONG)
         })
 //      This is for CarouselView that displays fresh offers such as discounts, events
-        mainViewModel.offerLiveData.observe(requireActivity(), Observer {
-            carouselView.setImageListener { position, imageView ->
-                Glide.with(imageView).load(Constants.HOST_IMAGE + it[position].image)
-                    .into(imageView)
-            }
-            carouselView.pageCount = it.count()
-        })
+
+//        mainViewModel.offerLiveData.observe(requireActivity(), Observer {
+//            carouselView.setImageListener { position, imageView ->
+//                Glide.with(imageView).load(Constants.HOST_IMAGE + it[position].image)
+//                    .into(imageView)
+//            }
+//            carouselView.pageCount = it.count()
+//        })
+
 //      Executed when category data is received from API
         mainViewModel.categoryLiveData.observe(requireActivity(), Observer {
             category_recyclerView.adapter =

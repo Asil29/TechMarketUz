@@ -10,7 +10,7 @@
         android:id="@+id/animationView"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        app:lottie_fileName="cart_anim.json"
+        app:lottie_fileName="splash_anim.json"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         android:layout_gravity="center"/>

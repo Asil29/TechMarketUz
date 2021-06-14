@@ -8,13 +8,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.R
+import com.example.onlineshop.recyclerview.GridSpacingItemDecoration
 import com.example.onlineshop.recyclerview.ProductsAdapter
 import com.example.onlineshop.utils.PrefUtils
 import com.example.onlineshop.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_favourite.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class FavouriteFragment : Fragment() {
@@ -47,7 +50,10 @@ class FavouriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //      Recycleriew that displays the favorite items of the user
-        fav_product_recyclerView.layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
+        fav_product_recyclerView.addItemDecoration(GridSpacingItemDecoration(3, 30, false))
+        fav_product_recyclerView.layoutManager =
+            GridLayoutManager(requireActivity(), 2)
+
 //      If there is no favorite items then it shows empty view
         if (PrefUtils.getFavouriteList().isEmpty()){
             swipe_refresh_layout.visibility = View.GONE

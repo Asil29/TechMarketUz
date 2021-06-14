@@ -25,23 +25,26 @@
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/ic_menu"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:clickable="true"
-                android:src="@drawable/ic_menu"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_menu__new_"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
             <TextView
                 android:id="@+id/textViewMenu"
                 android:layout_width="0dp"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
 
             <ImageView
                 android:id="@+id/ic_loupe"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:clickable="true"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_loupe"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
         </LinearLayout>
@@ -64,7 +67,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_cloud"
+                android:src="@drawable/ic_no_signal"
                 android:layout_gravity="center"
                 android:layout_marginBottom="8dp"/>
 
@@ -84,6 +87,7 @@
         </LinearLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

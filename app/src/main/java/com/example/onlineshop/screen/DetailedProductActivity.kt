@@ -1,7 +1,10 @@
 package com.example.onlineshop.screen
 
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
@@ -12,6 +15,7 @@ import com.example.onlineshop.model.ProductModel
 import com.example.onlineshop.utils.Constants
 import com.example.onlineshop.utils.PrefUtils
 import kotlinx.android.synthetic.main.activity_detailed_product.*
+import kotlinx.android.synthetic.main.category_item.view.*
 
 class DetailedProductActivity : AppCompatActivity() {
     lateinit var item: ProductModel
@@ -23,15 +27,51 @@ class DetailedProductActivity : AppCompatActivity() {
         item = intent.getSerializableExtra(Constants.EXTRA_DATA) as ProductModel
 //      When back button is pressed, it finishs the current acitivity
         back_button.setOnClickListener {
-            finish()
+            var iconAnimator = ObjectAnimator.ofFloat(
+                back_button,
+                View.ROTATION,
+                -360f, 0f
+            )
+            iconAnimator.duration = 200
+            iconAnimator.start()
+            back_button.postDelayed({
+                finish()},
+                200
+            )
         }
 //      When this button pressed, it changes the state of the fav button
         favourite_button.setOnClickListener {
             PrefUtils.setFavourite(item)
 
             if (PrefUtils.isFavourite(item)) {
+//                var iconAnimator = ObjectAnimator.ofArgb(
+//                    favourite_button,
+//                    "ImageResource",
+//                    R.drawable.ic_star
+//                )
+//                iconAnimator.duration = 150
+//                iconAnimator.start()
+//                val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 1.01f)
+//                val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.01f)
+//                val sizeAnimator = ObjectAnimator.ofPropertyValuesHolder(
+//                    favourite_button, scaleX, scaleY)
+//                sizeAnimator.repeatMode = ObjectAnimator.REVERSE
+//                sizeAnimator.start()
                 favourite_button.setImageResource(R.drawable.ic_star)
             } else {
+//                var iconAnimator = ObjectAnimator.ofArgb(
+//                    favourite_button,
+//                    "ImageResource",
+//                    R.drawable.ic_free_star
+//                )
+//                iconAnimator.duration = 50
+//                iconAnimator.start()
+//                val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 1.0f)
+//                val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.0f)
+//                val sizeAnimator = ObjectAnimator.ofPropertyValuesHolder(
+//                    favourite_button, scaleX, scaleY)
+//                sizeAnimator.repeatMode = ObjectAnimator.REVERSE
+//                sizeAnimator.start()
                 favourite_button.setImageResource(R.drawable.ic_free_star)
             }
 

@@ -51,15 +51,39 @@ class MainActivity : AppCompatActivity() {
 //      Adding fragments to supportFragmentManager to make them ready to be shown
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, homeFragment, homeFragment.tag).hide(homeFragment)
+            .setCustomAnimations(
+                R.anim.fade_in,
+                R.anim.fade_out,
+                R.anim.fade_in,
+                R.anim.fade_out
+            )
             .commit()
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, favouriteFragment, favouriteFragment.tag)
+            .setCustomAnimations(
+                R.anim.fade_in,
+                R.anim.fade_out,
+                R.anim.fade_in,
+                R.anim.fade_out
+            )
             .hide(favouriteFragment).commit()
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, cartFragment, cartFragment.tag).hide(cartFragment)
+            .setCustomAnimations(
+                R.anim.fade_in,
+                R.anim.fade_out,
+                R.anim.fade_in,
+                R.anim.fade_out
+            )
             .commit()
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, profileFragment, profileFragment.tag)
+            .setCustomAnimations(
+                R.anim.fade_in,
+                R.anim.fade_out,
+                R.anim.fade_in,
+                R.anim.fade_out
+            )
             .hide(profileFragment).commit()
 //      When user enters the app for the first time, then Home Fragment will be shown because it is an active fragment by default
         supportFragmentManager.beginTransaction().show(activeFragment).commit()
